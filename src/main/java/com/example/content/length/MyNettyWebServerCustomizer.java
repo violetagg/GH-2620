@@ -37,6 +37,9 @@ public class MyNettyWebServerCustomizer implements WebServerFactoryCustomizer<Ne
 				}
 				ctx.write(originalMsg, promise);
 			}
+			else {
+				ctx.write(msg, promise);
+			}
 		}
 	}
 }
